@@ -5,6 +5,14 @@ import math
 import japanize_matplotlib
 
 st.title("⏳ 私の24時間スケジュール")
+TAG_COLORS = {
+    "日常": "#87CEFA",      # 水色 (LightSkyBlue)
+    "予定": "#98FB98",      # 薄い緑 (PaleGreen)
+    "就活": "#FFB6C1",      # ピンク (LightPink)
+    "研究": "#FFA500",      # オレンジ (Orange)
+    "IT": "#FFFACD",  # 薄い黄色 (LemonChiffon)
+    "課題": "#DDA0DD",      # 薄い紫 (Plum)
+}
 
 #CSVから「すべてのデータ」と「存在する日付」を読み込む
 all_data = []
@@ -49,8 +57,13 @@ for task in all_tasks:
     
     start_angle = (start_hour / 24) * 2 * math.pi
     width_angle = (duration_hour / 24) * 2 * math.pi
+
+    # ★追加：タグ名に対応する色を辞書から探す。
+    # もし辞書にない新しいタグ（「睡眠」など）が来た場合は、デフォルトでグレー（#D3D3D3）にします。
+    bar_color = TAG_COLORS.get(tag_name, "#D3D3D3")
     
-    ax.bar(x=start_angle, height=1, width=width_angle, bottom=0, align='edge', edgecolor="white")
+    # ★変更：color=bar_color を追加して、取得した色でグラフを塗ります！
+    ax.bar(x=start_angle, height=1, width=width_angle, bottom=0, align='edge', color=bar_color, edgecolor="white")
     mid_angle = start_angle + (width_angle / 2)
     ax.text(mid_angle, 0.6, task_name, ha='center', va='center', fontsize=12)
 
