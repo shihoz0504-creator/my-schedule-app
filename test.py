@@ -53,7 +53,8 @@ ax.set_yticks([])
 for task in all_tasks:
     task_name = task[1]
     start_hour = float(task[2])     
-    duration_hour = float(task[3])  
+    duration_hour = float(task[3])
+    tag_name = task[4]
     
     start_angle = (start_hour / 24) * 2 * math.pi
     width_angle = (duration_hour / 24) * 2 * math.pi
