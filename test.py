@@ -2,6 +2,7 @@ import streamlit as st
 import csv
 import matplotlib.pyplot as plt
 import math
+import japanize_matplotlib
 
 st.title("⏳ 私の24時間スケジュール")
 
