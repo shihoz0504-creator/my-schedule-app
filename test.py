@@ -6,8 +6,6 @@ import japanize_matplotlib
 
 st.title("⏳ 私の24時間スケジュール")
 
-plt.rcParams['font.family'] = 'Meiryo'  
-
 #CSVから「すべてのデータ」と「存在する日付」を読み込む
 all_data = []
 unique_dates = []
