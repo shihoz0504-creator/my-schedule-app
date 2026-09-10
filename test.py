@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import math
 import japanize_matplotlib
 
-st.title("⏳ 私の24時間スケジュール")
+st.title("24時間スケジュール")
 TAG_COLORS = {
     "日常": "#87CEFA",      # 水色 (LightSkyBlue)
     "予定": "#98FB98",      # 薄い緑 (PaleGreen)
