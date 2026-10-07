@@ -46,7 +46,7 @@ for line in all_data:
 fig, ax = plt.subplots(subplot_kw={'polar': True})
 ax.set_theta_zero_location("N")
 ax.set_theta_direction(-1)
-ax.set_xticks([i / 24 * 2 * math.pi for i in range(0, 24, 3)])
+ax.set_xticks([i / 24 * 2 * math.pi for i in range(0, 24, 1)])
 ax.set_xticklabels([f"{i}:00" for i in range(0, 24, 1)])
 ax.set_yticks([])  
 
