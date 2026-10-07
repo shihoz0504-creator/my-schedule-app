@@ -66,7 +66,7 @@ for task in all_tasks:
     # ★変更：color=bar_color を追加して、取得した色でグラフを塗ります！
     ax.bar(x=start_angle, height=1, width=width_angle, bottom=0, align='edge', color=bar_color, edgecolor="white")
     mid_angle = start_angle + (width_angle / 2)
-    ax.text(mid_angle, 0.6, task_name, ha='center', va='center', fontsize=9)
+    ax.text(mid_angle, 0.6, task_name, ha='center', va='center', fontsize=6)
 
 # Web画面にグラフを表示
 st.pyplot(fig)
