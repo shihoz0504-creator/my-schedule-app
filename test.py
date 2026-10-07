@@ -47,7 +47,7 @@ fig, ax = plt.subplots(subplot_kw={'polar': True})
 ax.set_theta_zero_location("N")
 ax.set_theta_direction(-1)
 ax.set_xticks([i / 24 * 2 * math.pi for i in range(0, 24, 3)])
-ax.set_xticklabels([f"{i}:00" for i in range(0, 24, 3)])
+ax.set_xticklabels([f"{i}:00" for i in range(0, 24, 1)])
 ax.set_yticks([])  
 
 for task in all_tasks:
@@ -66,7 +66,7 @@ for task in all_tasks:
     # ★変更：color=bar_color を追加して、取得した色でグラフを塗ります！
     ax.bar(x=start_angle, height=1, width=width_angle, bottom=0, align='edge', color=bar_color, edgecolor="white")
     mid_angle = start_angle + (width_angle / 2)
-    ax.text(mid_angle, 0.6, task_name, ha='center', va='center', fontsize=12)
+    ax.text(mid_angle, 0.6, task_name, ha='center', va='center', fontsize=9)
 
 # Web画面にグラフを表示
 st.pyplot(fig)
